@@ -2,6 +2,25 @@
  * Created by wuxueyou on 2017/6/13.
  */
 
+biPlateform.config(function ($stateProvider, $urlRouterProvider) {
+    // $urlRouterProvider.otherwise('/main');
+    $stateProvider
+        .state('main', {
+            url: '/main',
+            params:{id:'',name:''},
+            templateUrl: 'org/biplateform/pages/main.html',
+            controller:'mainController'
+        })
+        .state('photos', {
+            url: '/photos',
+            templateUrl: 'partials/photos.html'
+        })
+        .state('about', {
+            url: '/about',
+            templateUrl: 'partials/about.html'
+        })
+});
+
 biPlateform.factory('sessionHelper', ["$rootScope", "$q", function ($rootScope, $q) {
     var sessionHelper = {
         responseError: function (response) {
