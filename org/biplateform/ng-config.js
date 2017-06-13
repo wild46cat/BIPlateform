@@ -2,7 +2,7 @@
  * Created by wuxueyou on 2017/6/13.
  */
 
-myApp.factory('sessionHelper', ["$rootScope", "$q", function ($rootScope, $q) {
+biPlateform.factory('sessionHelper', ["$rootScope", "$q", function ($rootScope, $q) {
     var sessionHelper = {
         responseError: function (response) {
             if (response.data.status == 2) {
@@ -16,7 +16,7 @@ myApp.factory('sessionHelper', ["$rootScope", "$q", function ($rootScope, $q) {
     return sessionHelper;
 }]);
 
-myApp.config(function ($httpProvider) {
+biPlateform.config(function ($httpProvider) {
     $httpProvider.defaults.headers.put['Content-Type'] = 'application/x-www-form-urlencoded';
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
