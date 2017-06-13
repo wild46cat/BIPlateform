@@ -4,18 +4,20 @@
 
 biPlateform.controller('mainController', function ($scope, $stateParams, httpService) {
     $scope.test = "bbb";
-    var c = $stateParams.id;
-    console.log(c);
+    //传参数
+    // var c = $stateParams.id;
+    // console.log(c);
 
-    httpService.postData("/request/post", null, function (data) {
-        console.log(data);
-    }, function (data) {
-        console.error(data);
-    });
-
-    httpService.getData("/request/get", function (data) {
-        console.log(data);
-    }, function (data) {
-        console.log(data);
-    });
+    //http请求实例
+    // httpService.postData("/request/post", null, function (data) {
+    //     console.log(data);
+    // }, function (data) {
+    //     console.error(data);
+    // });
+    //
+    // httpService.getData("/request/get", function (data) {
+    //     console.log(data);
+    // }, function (data) {
+    //     console.log(data);
+    // });
 });
